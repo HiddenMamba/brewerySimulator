@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using brewerySimulation.Properties;
 
 namespace brewerySimulation
 {
@@ -6,7 +8,7 @@ namespace brewerySimulation
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BrewingVat kadzWarzelna1 = new BrewingVat(1000);
         }
     }
 }
