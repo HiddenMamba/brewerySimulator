@@ -12,7 +12,6 @@ namespace brewerySimulation.Properties
         {
             quantity = qua;
         }
-
         public int HowManyBottles() => quantity;
 
         public void deliverBottle()
