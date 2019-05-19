@@ -1,10 +1,11 @@
 ﻿using System;
 namespace brewerySimulation.Properties
 {
-    public class FermentationVat
+    public class FermentationVat : Vat
     {
-        public FermentationVat()
+        public FermentationVat(int vol)
         {
+            this.volume = vol;
         }
     }
 }
