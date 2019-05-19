@@ -46,17 +46,17 @@ namespace brewerySimulation.Properties
                         Console.WriteLine("Zamawiam trucki");
                         //TUTAJ WARUNEK IF KTORY SPRAWDZA CZY MAMY WSZYSTKIE SKLADNIKI W KADZI I MOZNA WARZYC 
                         //PAMIETAJ O GORNYM KRANIE
-                        while (piwo < 3000)
+                        while (piwo < 3)
                         {
                             warzelnia.isWorking = true;
                             warzelnia.Brewing();
-                            piwo = piwo + 1000;
+                            piwo = piwo + 1;
                         }
                     }
                     else
                     {
                         //TUTAJ CZEKA AZ UWARZY I LECI DALEJ
-                        if (piwo == 3000)
+                        if (piwo == 3)
                         {
                             warzelnia.lowerTap = false;
                             warzelnia.upperTap = false;
@@ -72,7 +72,7 @@ namespace brewerySimulation.Properties
                 {
                     //TUTAJ CZEKA AZ ZAFERMENTUJE I ROBI TO CO DALEJ
                     filter.isWorking = true;
-                    Console.WriteLine("Filtruje");
+                    filter.FiltrationWork();
                     fermentor.isWorking = false;
                 }
             }
@@ -80,7 +80,12 @@ namespace brewerySimulation.Properties
             {
                 //TUTAJ CZEKA I ROBI TO CO PO FILTRACJI
                 rozlewnia.isWorking = true;
-                Console.WriteLine("Rozlewam");
+                for (int i = 1; i<=(3000/0.5); i++)
+                {
+                    magazyn.deliverBottle();
+                    rozlewnia.Work();
+                }
+                Console.WriteLine(magazyn.HowManyBottles());
                 filter.isWorking = false;
             }
         }

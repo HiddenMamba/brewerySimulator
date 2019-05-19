@@ -19,6 +19,8 @@ namespace brewerySimulation.Properties
         {
             //TUTAJ BUTELKOWANIE
             isWorking = true;
+            int time = (3000 / efficiency);
+
         }
 
         public void Run()

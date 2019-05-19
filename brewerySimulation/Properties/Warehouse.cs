@@ -16,12 +16,12 @@ namespace brewerySimulation.Properties
 
         public void deliverBottle()
         {
-
+            quantity = quantity - 1;
         }
 
-        public void receiveBottle()
+        public void receiveBottle(int ilosc)
         {
-
+            quantity = quantity + ilosc;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace brewerySimulation
             BrewingVat kadzWarzelna1 = new BrewingVat(1000);
             FermentationVat kadzFermentacyjna1 = new FermentationVat(3000);
             Bottler rozlewnia = new Bottler(1000);
-            Warehouse magazyn = new Warehouse(100);
+            Warehouse magazyn = new Warehouse(7000);
             Filtration kadzFiltracyjna = new Filtration();
             SuperVisor superVisor = new SuperVisor(rozlewnia, kadzWarzelna1, kadzFermentacyjna1, magazyn, kadzFiltracyjna);
 
