@@ -39,6 +39,7 @@
     <Compile Include="Properties\FermentationVat.cs" />
     <Compile Include="Properties\Bottler.cs" />
     <Compile Include="Properties\Warehouse.cs" />
+    <Compile Include="Properties\Interface.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

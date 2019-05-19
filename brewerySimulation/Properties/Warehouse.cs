@@ -3,17 +3,14 @@ namespace brewerySimulation.Properties
 {
     public class Warehouse
     {
-        private int quanity; //ilosc dostepnych butelek
+        private int quantity; //ilosc dostepnych butelek
 
         public Warehouse(int qua)
         {
-            quanity = qua;
+            quantity = qua;
         }
 
-        public int howManyBottles()
-        {
-            return quanity;
-        }
+        public int HowManyBottles() => quantity;
 
         public void deliverBottle()
         {

@@ -7,5 +7,24 @@ namespace brewerySimulation.Properties
         {
             this.volume = vol;
         }
+
+        public override void Process() => Brewing();
+
+        public override void Cleaning()
+        {
+        }
+        public override void Flow()
+        {
+        }
+
+        private void Brewing()
+        {
+            //TUTAJ dzieje sie soczek
+            if (this.lowerTapState() == false && this.upperTapState() == false)
+            {
+                //warzenie
+            }
+        }
+
     }
 }

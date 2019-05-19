@@ -1,25 +1,31 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace brewerySimulation.Properties
 {
-    public abstract class Vat
+    public abstract class Vat : Interface
     {
         public int volume; //wielkość w litrach
-        bool upperTap = false;
-        bool lowerTap = false;
+        private bool upperTap = false;
+        private bool lowerTap = false;
 
-        public void Process()
-        {
-            //gotowanie lub fermentacja
-        }
+        public bool upperTapState() => upperTap;
+        public bool lowerTapState() => lowerTap;
 
-        public void Cleaning()
-        {
-            //czyszczenie po zakonczonym procesie
-        }
+        public abstract void Cleaning();
+        public abstract void Flow();
 
-        public void Flow()
+        public bool HasFinished { get; set; }
+        public abstract void Process();
+
+        public void Run()
         {
-            //Przelew dalej
+            while (!HasFinished)
+            {
+                Process();
+                Thread.Sleep(2000);
+            }
         }
     }
 }
