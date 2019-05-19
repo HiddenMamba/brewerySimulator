@@ -4,28 +4,30 @@ using System.Threading.Tasks;
 
 namespace brewerySimulation.Properties
 {
-    public class Bottler
+    public class Bottler : Interface
     {
         int efficiency; //ilość butelek na godzine
+        public bool isWorking = false;
 
         public Bottler(int eff)
         {
             efficiency = eff;
         }
 
-        public void loadBottle()
+        public bool HasFinished { get; set; }
+        public void Work()
         {
-             
+            //TUTAJ BUTELKOWANIE
+            isWorking = true;
         }
 
-        public void fillUp()
+        public void Run()
         {
-
-        }
-
-        public void returnProduct()
-        {
-
+            while (!HasFinished)
+            {
+                Work();
+                Thread.Sleep(2000);
+            }
         }
     }
 }

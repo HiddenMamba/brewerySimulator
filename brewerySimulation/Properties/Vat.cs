@@ -7,8 +7,8 @@ namespace brewerySimulation.Properties
     public abstract class Vat : Interface
     {
         public int volume; //wielkość w litrach
-        private bool upperTap = false;
-        private bool lowerTap = false;
+        public bool upperTap = false;
+        public bool lowerTap = false;
 
         public bool upperTapState() => upperTap;
         public bool lowerTapState() => lowerTap;
