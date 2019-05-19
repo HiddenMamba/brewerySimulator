@@ -40,6 +40,8 @@
     <Compile Include="Properties\Bottler.cs" />
     <Compile Include="Properties\Warehouse.cs" />
     <Compile Include="Properties\Interface.cs" />
+    <Compile Include="Properties\SuperVisor.cs" />
+    <Compile Include="Properties\Truck.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+
 namespace brewerySimulation.Properties
 {
     public class FermentationVat : Vat
