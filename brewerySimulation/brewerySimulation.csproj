@@ -43,6 +43,9 @@
     <Compile Include="Properties\SuperVisor.cs" />
     <Compile Include="Properties\Truck.cs" />
     <Compile Include="Properties\Filtration.cs" />
+    <Compile Include="Properties\WaterTruck.cs" />
+    <Compile Include="Properties\HopTruck.cs" />
+    <Compile Include="Properties\BarleyTruck.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

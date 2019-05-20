@@ -7,6 +7,40 @@ namespace brewerySimulation.Properties
     public class BrewingVat : Vat
     {
         public bool isWorking = false;
+        public int water = 0;
+        public int hop = 0;
+        public int barley = 0;
+
+        private int recipeWater = 900;
+        private int recipeHop = 50;
+        private int recipeBarley = 100;
+
+
+        public bool isEnoughWater()
+        {
+            if (this.water == recipeWater) return true;
+            else
+            {
+                return false;
+            }
+        }
+        public bool isEnoughHop()
+        {
+            if (this.hop == recipeHop) return true;
+            else
+            {
+                return false;
+            }
+        }
+        public bool isEnoughBarley()
+        {
+            if (this.barley == recipeBarley) return true;
+            else
+            {
+                return false;
+            }
+        }
+
         public BrewingVat(int vol)
         {
             this.volume = vol;
@@ -33,6 +67,9 @@ namespace brewerySimulation.Properties
             if (this.lowerTapState() == false && this.upperTapState() == false)
             {
                 //warzenie
+                this.water = 0;
+                this.hop = 0;
+                this.barley = 0;
                 isWorking = true;
                 Console.WriteLine("Warze piwko");
                 Thread.Sleep(3000);
