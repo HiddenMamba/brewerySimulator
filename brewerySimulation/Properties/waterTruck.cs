@@ -7,6 +7,7 @@ namespace brewerySimulation.Properties
     public class WaterTruck : Truck
     {
         private readonly BrewingVat vat;
+
         public WaterTruck(BrewingVat warzelnia)
         {
             this.volume = 300;

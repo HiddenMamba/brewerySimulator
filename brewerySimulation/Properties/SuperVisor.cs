@@ -84,10 +84,7 @@ namespace brewerySimulation.Properties
                         fred3.Start();
                         Thread fred4 = new Thread(new ThreadStart(jeczmienny1.Run));
                         fred4.Start();
-                        if(warzelnia.isEnoughWater() == true)
-                        {
-                            fred2.Abort();
-                        }
+                      
 
                     }
                     else
